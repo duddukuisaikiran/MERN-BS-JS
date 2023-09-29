@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=", initial-scale=1.0">
+    <title>Java Script 4</title>
+</head>
+<style>
+
+</style>
+<body>
+    <center>
+    <button onclick="date()">show date</button>
+    <p id="para1"></p>
+    <button onclick="time()">show Time</button>
+    <p id="para2"></p>
+</center>
+    <script>
+        function date() {
+            var curdate = new Date();
+            var mon =["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE",
+            "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+        
+            var day = curdate.getDate();
+            var mon = mon[curdate.getMonth()];
+            var year = curdate.getFullYear();
+            var res = day +"/" +mon +"/" +year;
+            document.getElementById("para1").textContent="date is : "+res;
+        }
+        function time() {
+            const date=new Date();
+            document.getElementById("para2").innerHTML=date;
+        }
+
+    </script>
+</body>
+</html>
